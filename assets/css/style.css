@@ -13,10 +13,59 @@
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(23, 114, 188, 0.5), rgba(255, 255, 255, 1));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   
+}
+.start-scrn,
+.score-container
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#start-btn,
+#restart {
+    font-size: 1.33em;
+    padding: 0.5em 1.8em;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+    border-radius: 0.2em;
+
+}
+
+#restart {
+    margin-top: 0.9em;
+}
+
+#display-container {
+    padding: 3.1em 1.8em;
+    background-color: aliceblue;
+    width: 80%;
+    max-width: 37.5em;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.6em;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 1.8em;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.6em;
+    border-bottom: 0.1em solid darkblue;
 }
 
