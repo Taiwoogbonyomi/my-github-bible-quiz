@@ -10,3 +10,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(23, 114, 188, 0.5), rgba(255, 255, 255, 1));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
