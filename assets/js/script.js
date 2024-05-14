@@ -285,13 +285,13 @@ function quizCreator() {
         div.appendChild(question_DIV);
 
         div.innerHTML += `
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="checker(this)">
         ${i.options[0]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="checker(this)">
         ${i.options[1]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="checker(this)">
         ${i.options[2]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="checker(this)">
         ${i.options[3]}</button>
         `;
 
@@ -303,7 +303,7 @@ function quizCreator() {
 /**
  * Checks the right answer and if correct add to scoreCount.
  */
-function assertAnswer(userOption) {
+function checker(userOption) {
     let userSolution = userOption.innerText;
     let question = document.getElementsByClassName("container-mid")[questionCount];
     let options = question.querySelectorAll(".option-div");
