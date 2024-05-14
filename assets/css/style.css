@@ -50,7 +50,7 @@ button {
 #display-container {
     padding: 3.1em 1.8em;
     background-color: aliceblue;
-    width: 80%;
+    width: 50%;
     max-width: 60%;
     margin: 0 auto;
     position: absolute;
@@ -89,17 +89,19 @@ button {
     margin-block-end: 1em;
 }
 
-.options-div {
+.option-div {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1em;
     margin: 0.3em 0;
-    padding: 1em;
+    padding: 0.75em 1em;
     text-align: left;
-    outline: none;
-    background: transparent;
-    border: 1px solid beige;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 0.3em;
+    cursor: pointer;
+    display: block; /* Change from 'display: inline;' to 'display: block;' */
 }
+
 
 .options-div:disabled {
     color: black;
@@ -121,8 +123,14 @@ button {
     display: none;
 }
 
+.correct {
+    background-color: lightgreen;
+    color: green;
+    border-color: green;
+}
+
 .incorrect {
-    background-color: aliceblue;
+    background-color: orange;
     color: orangered;
     border-color: orangered;
 }
@@ -133,3 +141,30 @@ button {
 
 }
 
+
+@media screen and (max-width: 750px) {
+    #background-image {
+        display: flex;
+        justify-content: center;
+        max-height: 80%;
+    }
+
+    #background-image {
+        max-width: 70%;
+        height: auto;
+    }
+
+}
+
+/* Small screens from 380px and down */
+@media screen and (max-width: 450px) {
+    #display-container {
+        padding: 2rem 1rem;
+        height: 40rem;
+        max-width: 100%;
+        
+        
+        
+    }
+
+}
