@@ -223,9 +223,54 @@ const quizArray = [
     ]
 
 
-    restart.addEventListener ("click", () => {
+  /**
+ * Restarts the game, hiding the score container and show the quiz container again
+ */
+restart.addEventListener("click", function () {
     initial();
-    displayContainer.classList.remove("hide");
+    quizContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
+});
 
-})
+/**
+ * Displays the next question, increse the questionCount by 1 and if there are no more questions it will show your score. 
+ */
+
+function displayNext() {
+    questionCount += 1;
+
+    if (questionCount == questionsArray.length) {
+        quizContainer.classList.add("hide");
+        scoreContainer.classList.remove("hide");
+        userScore.innerHTML = "Your Score is " +
+            scoreCount + " out of " + questionCount;
+    } else {
+        numOfQue.innerHTML = questionCount + 1 + " of " + questionsArray.length + " Question";
+
+        quizDisplay(questionCount);
+        count = 17;
+        clearInterval(countdown);
+        timerDisplay();
+    }
+}
+
+nextQuestionButton.addEventListener("click", displayNext);
+
+
+/**
+ * Shows a timer that counts down from 15.
+ */
+function timerDisplay() {
+    countdown = setInterval(function () {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+}
+
+
+
+
