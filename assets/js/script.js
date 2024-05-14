@@ -3,18 +3,19 @@ const userScore = document.getElementById("user-score");
 const startScrn = document.querySelector(".start-scrn");
 const timeLeft = document.querySelector(".time-left");
 const nextButton = document.getElementById("next-question-button");
-const displayContainer = document.getElementById(".display-container");
-const restart = document.getElementById(".restart");
-const numOfQue = document.querySelector("number-of-question");
-const startBtn = document.getElementById(".start-btn");
+const displayContainer = document.getElementById("display-container"); 
+const restart = document.getElementById("restart"); 
+const numOfQue = document.querySelector(".number-of-question"); 
+const startBtn = document.getElementById("start-btn"); 
 const scoreContainer = document.getElementById("score-container");
 let questionCount;
-let scoreCount=0;
+let scoreCount = 0;
 let count = 17;
 let countdown;
 
 
-// 16 questions with answers and option array//
+
+// 17 questions with answers and option array//
 const quizArray = [
     {
         "id" : "0",
@@ -239,13 +240,13 @@ restart.addEventListener("click", function () {
 function displayNext() {
     questionCount += 1;
 
-    if (questionCount == questionsArray.length) {
+    if (questionCount == quizArray.length) {
         quizContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
             scoreCount + " out of " + questionCount;
     } else {
-        numOfQue.innerHTML = questionCount + 1 + " of " + questionsArray.length + " Question";
+        numOfQue.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
 
         quizDisplay(questionCount);
         count = 17;
@@ -254,7 +255,7 @@ function displayNext() {
     }
 }
 
-nextQuestionButton.addEventListener("click", displayNext);
+nextButton.addEventListener("click", displayNext);
 
 
 /**
@@ -285,17 +286,17 @@ function quizDisplay(questionCount) {
  * creates the quiz with random questions selected from the questiosArray
  */
 function quizCreator() {
-    questionsArray.sort(function () {
+    quizArray.sort(function () {
         return Math.random() - 0.5;
     });
-    for (let i of questionsArray) {
+    for (let i of quizArray) {
         i.options.sort(function () {
             return Math.random() - 0, 5;
         });
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
 
-        numOfQue.innerHTML = 1 + " of " + questionsArray.length + " Question";
+        numOfQue.innerHTML = 1 + " of " + quizArray.length + " Question";
 
         let question_DIV = document.createElement("p");
         question_DIV.classList.add("question");
@@ -325,14 +326,14 @@ function assertAnswer(userOption) {
     let question = document.getElementsByClassName("container-mid")[questionCount];
     let options = question.querySelectorAll(".option-div");
 
-    if (userSolution === questionsArray[questionCount].correct) {
+    if (userSolution === quizArray[questionCount].correct) {
         userOption.classList.add("correct");
         scoreCount++;
     } else {
         userOption.classList.add("incorrect");
 
         options.forEach(function (element) {
-            if (element.innerText === questionsArray[questionCount].correct) {
+            if (element.innerText === quizArray[questionCount].correct) {
                 element.classList.add("correct");
             }
         });
@@ -343,3 +344,35 @@ function assertAnswer(userOption) {
         element.disabled = true;
     });
 }
+
+/**
+ * Initial function to clear the quiz and start from zero.
+ */
+function initial() {
+    quizContainer.innerHTML = "";
+    questionCount = 0;
+    scoreCount = 0;
+    scoreCount = 0;
+    count = 17;
+    clearInterval(countdown);
+    timerDisplay();
+    quizCreator();
+    quizDisplay(questionCount);
+}
+
+/**
+ * Button that starts the quiz and shows the "quizContainer".
+ */
+startBtn.addEventListener("click", function () {
+    startScrn.classList.add("hide");
+    quizContainer.classList.remove("hide");
+    initial();
+});
+
+/**
+ * when the window is loaded, the start screen shows with the begin button.
+ */
+window.onload = function () {
+    startScrn.classList.remove("hide");
+    quizContainer.classList.add("hide");
+};
