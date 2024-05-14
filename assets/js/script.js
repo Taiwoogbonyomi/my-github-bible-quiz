@@ -2,229 +2,211 @@ const quizContainer = document.getElementById("quiz-container");
 const userScore = document.getElementById("user-score");
 const startScrn = document.querySelector(".start-scrn");
 const timeLeft = document.querySelector(".time-left");
-const nextButton = document.getElementById("next-question-button");
-const displayContainer = document.getElementById("display-container"); 
-const restart = document.getElementById("restart"); 
-const numOfQue = document.querySelector(".number-of-question"); 
-const startBtn = document.getElementById("start-btn"); 
+const nextQuestionButton = document.getElementById("next-question-button");
+const displayContainer = document.getElementById("display-container");
+const restart = document.getElementById("restart");
+const numOfQue = document.querySelector(".number-of-question");
+const startBtn = document.getElementById("start-btn");
 const scoreContainer = document.getElementById("score-container");
 let questionCount;
 let scoreCount = 0;
-let count = 17;
+let count = 16;
 let countdown;
 
-
-
-// 17 questions with answers and option array//
+// 16 questions with answers and option array//
 const quizArray = [
     {
-        "id" : "0",
+        "id": "0",
         "question": "What is the first book in the bible?",
-        "options" : [
+        "options": [
             "Exodus",
             "Genesis",
             "Matthew",
             "Revelation"
         ],
-        "correct" : "Genesis"
-    
+        "correct": "Genesis"
+
     },
     {
-        
-        "id" : "1",
+        "id": "1",
         "question": "How many days did God take to create the world?",
-        "options" : [
+        "options": [
             "Seven",
             "Five",
             "Ten",
             "Six"
         ],
-        "correct" : "Six"
+        "correct": "Six"
     },
     {
-        
-        "id" : "2",
+        "id": "2",
         "question": "Where did Adam and Eve live at the beginning of the world?",
-        "options" : [
+        "options": [
             "Garden of Eden",
             "Jerusalem",
             "Heaven",
             "Babylon"
         ],
-        "correct" : "Garden of Eden"
+        "correct": "Garden of Eden"
     },
     {
-        
-        "id" : "3",
+        "id": "3",
         "question": "How many days did it rain when Noah was in the ark?",
-        "options" : [
+        "options": [
             "32 days",
             "40 days",
             "30 days",
             "10 days"
         ],
-        "correct" : "40 days"
+        "correct": "40 days"
     },
     {
-        
-        "id" : "4",
+        "id": "4",
         "question": "What did Jacob give Joseph that sparked jealousy from his siblings?",
-        "options" : [
+        "options": [
             "A special sword",
             "An arrow",
             "A coat of many colors",
             "An helmet"
         ],
-        "correct" : "A coat of many colors"
+        "correct": "A coat of many colors"
     },
     {
-        
-        "id" : "5",
+        "id": "5",
         "question": "Through what means did God speak to Moses in the desert?",
-        "options" : [
+        "options": [
             "A burning bush",
             "A woman",
             "A river",
             "A child"
         ],
-        "correct" : "A burning bush"
+        "correct": "A burning bush"
     },
     {
-        
-        "id" : "6",
+        "id": "6",
         "question": "What did Moses say God commanded Pharaoh to do?",
-        "options" : [
+        "options": [
             "Let his people go",
             "Feed the Israelites",
             "Pray with the Israelites",
             "Kill the people"
         ],
-        "correct" : "Let my people go"
+        "correct": "Let my people go"
     },
     {
-        
-        "id" : "7",
+        "id": "7",
         "question": "What is the name of the city where Jesus was born?",
-        "options" : [
+        "options": [
             "Jerusalem",
             "Bethlehem",
             "Cannan",
             "Egypt"
         ],
-        "correct" : "Bethlehem"
+        "correct": "Bethlehem"
     },
     {
-        
-        "id" : "8",
+        "id": "8",
         "question": "Who baptised Jesus?",
-        "options" : [
+        "options": [
             "God",
             "Simon Peter",
             "Andrew",
             "John the Baptist"
         ],
-        "correct" : "John the Baptist"
+        "correct": "John the Baptist"
     },
     {
-        
-        "id" : "9",
+        "id": "9",
         "question": "How much bread and fish did Jesus use to feed more than 5,000 people?",
-        "options" : [
+        "options": [
             "5000 loaves of bread and 1000 fish",
             "Two loaves of bread and 10 fish",
             "Five loaves of bread and two fish",
             "Ten loaves of bread and 10 fish"
         ],
-        "correct" : "Five loaves of bread and two fish"
+        "correct": "Five loaves of bread and two fish"
     },
     {
-        
-        "id" : "10",
+        "id": "10",
         "question": "What did Jesus do at the Last Supper to his disciples?",
-        "options" : [
+        "options": [
             "Washed their feet",
             "Gave them money",
             "Prayed for them",
             "Gist with them"
         ],
-        "correct" : "Washed their feet"
+        "correct": "Washed their feet"
     },
     {
-        
-        "id" : "11",
+        "id": "11",
         "question": " What happened after Jesus was buried in the tomb?",
-        "options" : [
+        "options": [
             "He passed away",
             "He rose again",
             "He ran away",
             "He decayed"
         ],
-        "correct" : "He rose again"
+        "correct": "He rose again"
     },
     {
-        
-        "id" : "12",
+        "id": "12",
         "question": "How did Jesus leave Earth and go to Heaven?",
-        "options" : [
+        "options": [
             "He went in an aeroplane",
             "He rose into the clouds",
             "He disappeared",
             "He sailed"
         ],
-        "correct" : "He rose into the clouds"
+        "correct": "He rose into the clouds"
     },
     {
-        
-        "id" : "13",
+        "id": "13",
         "question": "What day of the week did Jesus rise back to life?",
-        "options" : [
+        "options": [
             "Thursday",
             "Wednesday",
             "Monday",
             "Sunday"
         ],
-        "correct" : "Sunday"
+        "correct": "Sunday"
     },
     {
-        
-        "id" : "14",
+        "id": "14",
         "question": "What is the 1st commandment?",
-        "options" : [
+        "options": [
             "You shall not steal",
             "You shall not lie",
             "Yous shall have no other gods before me",
             "You shall not kill"
         ],
-        "correct" : "You shall have no other gods before me"
+        "correct": "You shall have no other gods before me"
     },
     {
-        
-        "id" : "15",
+        "id": "15",
         "question": "What is the last book in the bible?",
-        "options" : [
+        "options": [
             "Revelation",
             "Act",
             "Malachi",
             "Matthew"
         ],
-        "correct" : "Revelation"
+        "correct": "Revelation"
     },
     {
-        
-        "id" : "16",
+        "id": "16",
         "question": "How did the 12 brothers get rid of Joseph?",
-        "options" : [
+        "options": [
             "Threw him in the Lion's den",
             "Sold him to slave traders",
             "Killed him",
             "Left him in the wild"
         ],
-        "correct" : "Sold him to slave traders"
+        "correct": "Sold him to slave traders"
     }
-    ]
+];
 
 
-  /**
+/**
  * Restarts the game, hiding the score container and show the quiz container again
  */
 restart.addEventListener("click", function () {
@@ -234,28 +216,27 @@ restart.addEventListener("click", function () {
 });
 
 /**
- * Displays the next question, increse the questionCount by 1 and if there are no more questions it will show your score. 
+ * Displays the next question, increase the questionCount by 1 and if there are no more questions it will show your score.
  */
-
 function displayNext() {
     questionCount += 1;
 
-    if (questionCount == quizArray.length) {
+    if (questionCount === quizArray.length) {
         quizContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
-            scoreCount + " out of " + questionCount;
+            scoreCount + " out of " + quizArray.length;
     } else {
         numOfQue.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
 
         quizDisplay(questionCount);
-        count = 17;
+        count = 16;
         clearInterval(countdown);
         timerDisplay();
     }
 }
 
-nextButton.addEventListener("click", displayNext);
+nextQuestionButton.addEventListener("click", displayNext);
 
 
 /**
@@ -265,7 +246,7 @@ function timerDisplay() {
     countdown = setInterval(function () {
         count--;
         timeLeft.innerHTML = `${count}s`;
-        if (count == 0) {
+        if (count === 0) {
             clearInterval(countdown);
             displayNext();
         }
@@ -283,7 +264,7 @@ function quizDisplay(questionCount) {
 }
 
 /**
- * creates the quiz with random questions selected from the questiosArray
+ * Creates the quiz with random questions selected from the questionsArray
  */
 function quizCreator() {
     quizArray.sort(function () {
@@ -291,7 +272,7 @@ function quizCreator() {
     });
     for (let i of quizArray) {
         i.options.sort(function () {
-            return Math.random() - 0, 5;
+            return 0.5 - Math.random();
         });
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
@@ -304,19 +285,20 @@ function quizCreator() {
         div.appendChild(question_DIV);
 
         div.innerHTML += `
-        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        <button class="option-div" onclick="assertAnswer(this)">
         ${i.options[0]}</button>
-        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        <button class="option-div" onclick="assertAnswer(this)">
         ${i.options[1]}</button>
-        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        <button class="option-div" onclick="assertAnswer(this)">
         ${i.options[2]}</button>
-        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        <button class="option-div" onclick="assertAnswer(this)">
         ${i.options[3]}</button>
         `;
 
         quizContainer.appendChild(div);
     }
 }
+
 
 /**
  * Checks the right answer and if correct add to scoreCount.
@@ -335,13 +317,15 @@ function assertAnswer(userOption) {
         options.forEach(function (element) {
             if (element.innerText === quizArray[questionCount].correct) {
                 element.classList.add("correct");
+            } else {
+                element.disabled = true; 
             }
         });
     }
 
     clearInterval(countdown);
     options.forEach(function (element) {
-        element.disabled = true;
+        element.disabled = true; 
     });
 }
 
@@ -352,8 +336,7 @@ function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
-    scoreCount = 0;
-    count = 17;
+    count = 16;
     clearInterval(countdown);
     timerDisplay();
     quizCreator();
