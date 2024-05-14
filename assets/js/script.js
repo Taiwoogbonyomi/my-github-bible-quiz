@@ -272,5 +272,74 @@ function timerDisplay() {
 }
 
 
+function quizDisplay(questionCount) {
+    let quizCards = document.querySelectorAll(".container-mid");
 
+    quizCards.forEach(function (card) {
+        card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+}
 
+/**
+ * creates the quiz with random questions selected from the questiosArray
+ */
+function quizCreator() {
+    questionsArray.sort(function () {
+        return Math.random() - 0.5;
+    });
+    for (let i of questionsArray) {
+        i.options.sort(function () {
+            return Math.random() - 0, 5;
+        });
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+
+        numOfQue.innerHTML = 1 + " of " + questionsArray.length + " Question";
+
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+
+        div.innerHTML += `
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        ${i.options[0]}</button>
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        ${i.options[1]}</button>
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        ${i.options[2]}</button>
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
+        ${i.options[3]}</button>
+        `;
+
+        quizContainer.appendChild(div);
+    }
+}
+
+/**
+ * Checks the right answer and if correct add to scoreCount.
+ */
+function assertAnswer(userOption) {
+    let userSolution = userOption.innerText;
+    let question = document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    if (userSolution === questionsArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
+    } else {
+        userOption.classList.add("incorrect");
+
+        options.forEach(function (element) {
+            if (element.innerText === questionsArray[questionCount].correct) {
+                element.classList.add("correct");
+            }
+        });
+    }
+
+    clearInterval(countdown);
+    options.forEach(function (element) {
+        element.disabled = true;
+    });
+}
