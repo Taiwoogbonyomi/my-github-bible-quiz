@@ -221,7 +221,7 @@ restart.addEventListener("click", function () {
 function displayNext() {
     questionCount += 1;
 
-    if (questionCount === quizArray.length) {
+    if (questionCount == quizArray.length) {
         displayContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
