@@ -211,7 +211,7 @@ const quizArray = [
  */
 restart.addEventListener("click", function () {
     initial();
-    quizContainer.classList.remove("hide");
+    displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
 
@@ -222,7 +222,7 @@ function displayNext() {
     questionCount += 1;
 
     if (questionCount === quizArray.length) {
-        quizContainer.classList.add("hide");
+        displayContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
             scoreCount + " out of " + quizArray.length;
@@ -348,14 +348,14 @@ function initial() {
  */
 startBtn.addEventListener("click", function () {
     startScrn.classList.add("hide");
-    quizContainer.classList.remove("hide");
+    displayContainer.classList.remove("hide");
     initial();
 });
 
 /**
- * when the window is loaded, the start screen shows with the begin button.
+ * when the window is loaded, the start screen shows with the start button.
  */
 window.onload = function () {
     startScrn.classList.remove("hide");
-    quizContainer.classList.add("hide");
+    displayContainer.classList.add("hide");
 };
