@@ -7,7 +7,7 @@ Welcome to the Bible Quiz! This web-based quiz application is designed to test a
 ##  Table of content
 - [Demo](#demo)
 - [Features](#features)
-- [Installation] (#installation)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
 - [Technologies Used](#technologies-used)
@@ -91,6 +91,7 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
     <img src="assets/README Images/score and restart-screen.png" alt="Score and restart button screen">
 
+
 ## Technologies Used
 ## Languages
 
@@ -98,6 +99,22 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 - **CSS**: For styling and layout.
 - **JavaScript**: For quiz functionality, including question navigation, timing, and score calculation.
 
+## font
+
+-The font used is Roboto and san-serif because they are designed to look good on multiple screen sizes.
+
+### Frameworks, Libraries & Programs Used
+- Git: Git was used to commit and push the codes to github for storage. 
+- [GitPod](https://gitpod.io/): Gitpod was used as the development environment for this project. In order to track development stage and version control, regular commits and pushes to GitHub has been made. The GitPod environment was created using a template provided by Code Institute.
+- [GitHub](https://github.com/): Github was used to deploy the site and store the codes. 
+
+
+### Browser compatibility 
+The website was tested in different browsers. 
+
+|Mozilla Firefox versie 102.0|no problems|
+|Microsoft Edge Versie 103.0.1264.44|no problems|
+|Google Chrome Versie 103.0.5060.114 | no problems|
 
 ## Testing
 
@@ -112,19 +129,24 @@ No errors where found by the official Jigsaw validator
 
 <img src="assets/README Images/W3c css-validator.png" alt="picture of Jigsaw validator result" >
 
+
 3. LIGHTHOUSE
- <img src="assets/README Images/lighthouse.png"> alt="Lighthouse result"
+ <img src="assets/README Images/lighthouse.png" alt="Lighthouse result">
 
  ### Fixed bugs 
 - Options not working properly, fixed by changing the display in the option div from inline to block.
 - Score and restart screen not showing, fixed by changing their display function from none to block 
 - DisplayNext function not properly working, Fixed by extrating the function from local scope to global scope.
 
+
+### Credits
 ### Images
 - All images were taken from: [Pngegg](https://www.pngegg.com/)
 
-### Credits 
+### Codes 
 - The basic code used was obtained from a [youtube tutorial from Dear Programmer](https://www.youtube.com/watch?v=WiLTsxjCmWQ&ab_channel=DearProgrammer) with some alterations made .
 - I found lots of useful information and codes from the[w3schools](https://www.w3schools.com/) 
 - Various parts of the website were inspired by the love math walkthrough project from Code institute 
 
+### Others
+- [Mock-up generator](https://techsini.com/multi-mockup/) used to display the site on different screen sizes.

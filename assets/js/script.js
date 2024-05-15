@@ -249,7 +249,7 @@ function timerDisplay() {
         if (count === 0) {
             clearInterval(countdown);
             displayNext();
-        }
+        };
     }, 1000);
 }
 
