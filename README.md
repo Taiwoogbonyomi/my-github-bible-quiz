@@ -51,6 +51,22 @@ To set up the Bible Quiz locally, follow these steps:
     open index.html
     ```
 
+## Deployment 
+The live version of the project is deployed at GitHub pages.
+
+The procedure for deployment followed the "Creating your site" steps provided in [GitHub Docs.](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+1. Log into GitHub.
+2. Locate the GitHub Repository that shall be deployed live.
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!”
+5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
+6. The website will deploy and the pages refreshes to provide the live link to the project.
+
+The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
+
+
+
 ## Usage
 
 1. **Start the Quiz:**
@@ -99,5 +115,16 @@ No errors where found by the official Jigsaw validator
 3. LIGHTHOUSE
  <img src="assets/README Images/lighthouse.png"> alt="Lighthouse result"
 
+ ### Fixed bugs 
+- Options not working properly, fixed by changing the display in the option div from inline to block.
+- Score and restart screen not showing, fixed by changing their display function from none to block 
+- DisplayNext function not properly working, Fixed by extrating the function from local scope to global scope.
 
+### Images
+- All images were taken from: [Pngegg](https://www.pngegg.com/)
+
+### Credits 
+- The basic code used was obtained from a [youtube tutorial from Dear Programmer](https://www.youtube.com/watch?v=WiLTsxjCmWQ&ab_channel=DearProgrammer) with some alterations made .
+- I found lots of useful information and codes from the[w3schools](https://www.w3schools.com/) 
+- Various parts of the website were inspired by the love math walkthrough project from Code institute 
 
