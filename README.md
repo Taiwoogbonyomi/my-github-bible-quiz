@@ -111,13 +111,29 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 ### Browser compatibility 
 The browsers below were used to test compatibility and there were no issues at all.
- 
+
 - Mozilla Firefox versie 102.0
 - Microsoft Edge Versie 103.0.1264.44
 -Google Chrome Versie 103.0.5060.114 
 
 ## Testing
+## User Story Testing
+|Goal| execution|
+|--------------------------------------------------------------------------------------|-------------------------------------------------------|
+| The main goal is to let the user test their bible story knowledge.| The Quiz lets them test their knowledge and restart if they want to try and improve.|
+| The user should have good insight in the content when viewing the startpage.| The backgroundimage gives the user a clear sight of what the quiz will be about|
+| The user should have an easy accesible button to start the quiz.| The start button is clear and easily visible.|
+| The user should receive direct feedback on whether the answer is correct or not.| A clear orange and green color is used for the user to easily see which option was correct.|
+| The user should be able to restart the quiz and try to improve.| When the quiz finishes, the user gets a clear Restart button if they wish to try again.|
 
+## manual code testing
+### responsiveness
+The website is designed to be used on different screen sizes. 
+The responsiveness of the website was first tested by chrome developer tools. 
+Different breakpoints where used to view the website. 
+Next to this the website was viewed on different devices: laptop, tablet and smartphones.
+
+## Validator testing
 1. HTML
 No errors were found by the official W3C validator
 
@@ -129,6 +145,10 @@ No errors where found by the official Jigsaw validator
 
 <img src="assets/README Images/W3c css-validator.png" alt="picture of Jigsaw validator result" >
 
+3. JSHint 
+No errors where found by the official JSHint validator
+
+<img src="assets/README Images/JShint.png" alt="picture of Jigsaw validator results">
 
 3. LIGHTHOUSE
  <img src="assets/README Images/lighthouse.png" alt="Lighthouse result">

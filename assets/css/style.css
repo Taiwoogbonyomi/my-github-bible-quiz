@@ -10,11 +10,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*body*/
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(23, 114, 188, 0.5), rgba(255, 255, 255, 1)), url(../images/bible-quiz.png);
    
 }
+
+
 .start-scrn,
 .score-container
 {
@@ -99,7 +102,7 @@ button {
     border: 1px solid #ddd;
     border-radius: 0.3em;
     cursor: pointer;
-    display: block; /* Change from 'display: inline;' to 'display: block;' */
+    display: block; 
 }
 
 
@@ -123,12 +126,14 @@ button {
     display: none;
 }
 
+/*Correct option*/
 .correct {
     background-color: lightgreen;
     color: green;
     border-color: green;
 }
 
+/*Incorrect option*/
 .incorrect {
     background-color: orange;
     color: orangered;
@@ -141,7 +146,7 @@ button {
 
 }
 
-
+/*For larger screen such as Ipad and laptop*/
 @media screen and (max-width: 750px) {
     #background-image {
         display: flex;

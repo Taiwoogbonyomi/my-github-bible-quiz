@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Bible Quiz</title>
 </head>
+
 <body>
     <div class="start-scrn">
         <button id="start-btn">Start</button>
@@ -17,11 +18,13 @@
                     1 of 16 questions
                 </span>
             </div>
+
             <div class="timer-div">
                 <img id="stop-time" src="assets/images/stop-time.png" alt="image of a stop watch" style="height: 30px; width: 30px;">
                 <span class="time-left">15s</span>
             </div>
         </div>
+
         <div id="quiz-container">
             <div class="container-mid hide">
                 <p class="question">
@@ -176,8 +179,6 @@
                 <button class="option-div" onclick="checker(this)" disabled>Killed him</button>
                 <button class="option-div correct" onclick="checker(this)" disabled>Sold him to slave traders</button>
             </div>
-            
-
         </div>
         <button id="next-question-button">Next</button>
     </div>
