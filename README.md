@@ -110,16 +110,16 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 
 ### Browser compatibility 
-The website was tested in different browsers. 
-
-|Mozilla Firefox versie 102.0|no problems|
-|Microsoft Edge Versie 103.0.1264.44|no problems|
-|Google Chrome Versie 103.0.5060.114 | no problems|
+The browsers below were used to test compatibility and there were no issues at all.
+ 
+- Mozilla Firefox versie 102.0
+- Microsoft Edge Versie 103.0.1264.44
+-Google Chrome Versie 103.0.5060.114 
 
 ## Testing
 
 1. HTML
-No errors where found by the official W3C validator
+No errors were found by the official W3C validator
 
 <img src="assets/README Images/W3c html-validator.png" alt="picture of W3C validator result" >
 
