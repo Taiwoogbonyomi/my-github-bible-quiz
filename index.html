@@ -9,9 +9,17 @@
 
 <body>
     <div class="start-scrn">
-        <button id="start-btn">Start</button>
+        <h1>Welcome to the Bible Quiz Game</h1>
+        <p>Instructions:</p>
+        <ul>
+            <li>You will be asked 10 random questions from a pool of 17 questions.</li>
+            <li>You have 15 seconds to answer each question.</li>
+            <li>You cannot proceed to the next question without answering the current one.</li>
+            <li>Your score will be displayed at the end of the quiz.</li>
+        </ul>
+        <button id="start-btn">Start Quiz</button>
     </div>
-    <div id="display-container">
+    <div id="display-container" class="hide">
         <div class="header">
             <div class="num-of-que">
                 <span class="number-of-question">
@@ -180,11 +188,12 @@
                 <button class="option-div correct" onclick="checker(this)" disabled>Sold him to slave traders</button>
             </div>
         </div>
-        <button id="next-question-button">Next</button>
+        <button id="next-question-button" disabled>Next Question</button>
+        <button id="mute-button" disabled>Mute</button>
     </div>
     <div class="score-container hide" id="score-container">
         <div id="user-score">Your Score is 0 out of 16</div>
-        <button id="restart">Restart</button>
+        <button id="restart">Restart Quiz</button>
     </div>
     
     
