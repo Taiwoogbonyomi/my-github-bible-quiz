@@ -260,46 +260,47 @@ function startTimer() {
 }
 
 
-function quizDisplay(questionCount) {
+function displayQuestion(index) {
     let quizCards = document.querySelectorAll(".container-mid");
 
     quizCards.forEach(function (card) {
         card.classList.add("hide");
     });
-    quizCards[questionCount].classList.remove("hide");
+    quizCards[index].classList.remove("hide");
+    nextQuestionButton.disabled = true;
 }
 
 /**
  * Creates the quiz with random questions selected from the questionsArray
  */
-function quizCreator() {
+function createQuiz() {
     quizArray.sort(function () {
         return Math.random() - 0.5;
     });
-    for (let i of quizArray) {
-        i.options.sort(function () {
+    // Select 10 random questions from the pool of 16 questions //
+    selectedQuestions = quizArray.slice(0,10)
+    for (let question of selectedQuestions) {
+        question.options.sort(function () {
             return 0.5 - Math.random();
         });
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
 
-        numOfQue.innerHTML = 1 + " of " + quizArray.length + " Question";
+        numOfQue.innerHTML = 1 + " of " + selectedQuestions.length + " Questions";
 
-        let question_DIV = document.createElement("p");
-        question_DIV.classList.add("question");
-        question_DIV.innerHTML = i.question;
-        div.appendChild(question_DIV);
+        let questionDIV = document.createElement("p");
+        questionDIV.classList.add("question");
+        questionDIV.innerHTML = question.question;
+        div.appendChild(questionDIV);
 
-        div.innerHTML += `
-        <button class="option-div" onclick="checker(this)">
-        ${i.options[0]}</button>
-        <button class="option-div" onclick="checker(this)">
-        ${i.options[1]}</button>
-        <button class="option-div" onclick="checker(this)">
-        ${i.options[2]}</button>
-        <button class="option-div" onclick="checker(this)">
-        ${i.options[3]}</button>
-        `;
+       
+        question.options.forEach(option => {
+            let button = document.createElement("button");
+            button.classList.add("option-div");
+            button.innerHTML = option;
+            button.onclick = () => checkAnswer(button, question.correct);
+            div.appendChild(button);
+        });
 
         quizContainer.appendChild(div);
     }
@@ -355,7 +356,7 @@ function initial() {
 startBtn.addEventListener("click", function () {
     startScrn.classList.add("hide");
     displayContainer.classList.remove("hide");
-    initial();
+    initializeQuiz();
 });
 
 /**
