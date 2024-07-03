@@ -8,10 +8,16 @@ const restart = document.getElementById("restart");
 const numOfQue = document.querySelector(".number-of-question");
 const startBtn = document.getElementById("start-btn");
 const scoreContainer = document.getElementById("score-container");
+const muteButton = document.getElementById("mute-button");
+const correctSound = document.getElementById("correct-sound");
+const incorrectSound = document.getElementById("incorrect-sound");
 let questionCount;
 let scoreCount = 0;
 let count = 16;
-let countdown;
+let countdownInterval;
+let selectedQuestions = [];
+let soundEnabled = True;
+
 
 // 16 questions with answers and option array//
 const quizArray = [
@@ -210,7 +216,7 @@ const quizArray = [
  * Restarts the game, hiding the score container and show the quiz container again
  */
 restart.addEventListener("click", function () {
-    initial();
+    initializeQuiz();
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
@@ -219,20 +225,20 @@ restart.addEventListener("click", function () {
  * Displays the next question, increase the questionCount by 1 and if there are no more questions it will show your score.
  */
 function displayNext() {
-    questionCount += 1;
+    questionIndex += 1;
 
-    if (questionCount == quizArray.length) {
+    if (questionIndex == selectedQuestions.length) {
         displayContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
-            scoreCount + " out of " + quizArray.length;
+            scoreCount + " out of " + selectedQuestions.length;
     } else {
-        numOfQue.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+        numOfQue.innerHTML = questionIndex + 1 + " of " + selectedQuestions.length + " Question";
 
-        quizDisplay(questionCount);
+        displayQuestion(questionIndex);
         count = 16;
         clearInterval(countdown);
-        timerDisplay();
+        startTimer();
     }
 }
 
@@ -242,12 +248,12 @@ nextQuestionButton.addEventListener("click", displayNext);
 /**
  * Shows a timer that counts down from 15.
  */
-function timerDisplay() {
-    countdown = setInterval(function () {
-        count--;
-        timeLeft.innerHTML = `${count}s`;
-        if (count === 0) {
-            clearInterval(countdown);
+function startTimer() {
+    countdownInterval = setInterval(function () {
+        timer--;
+        timeLeft.innerHTML = `${timer}s`;
+        if (timer === 0) {
+            clearInterval(countdownInterval);
             displayNext();
         };
     }, 1000);
