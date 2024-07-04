@@ -9,6 +9,7 @@ const numOfQue = document.querySelector(".number-of-question");
 const startBtn = document.getElementById("start-btn");
 const scoreContainer = document.getElementById("score-container");
 const muteButton = document.getElementById("mute-button");
+const exitQuizButton = document.getElementById("exit-quiz");
 const correctSound = document.getElementById("correct-sound");
 const incorrectSound = document.getElementById("incorrect-sound");
 let questionIndex = 0;
@@ -211,6 +212,17 @@ const quizArray = [
     }
 ];
 
+/**
+ * Exit the game and go back to the start screen
+ */
+function exitQuiz () {
+    clearInterval(countdownInterval);
+    displayContainer.classList.add("hide");
+    scoreContainer.classList.add("hide");
+    startScrn.classList.remove("hide");
+}
+
+exitQuizButton.addEventListener("click", exitQuiz);
 
 /**
  * Restarts the game, hiding the score container and show the quiz container again
@@ -220,6 +232,8 @@ restart.addEventListener("click", function () {
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
+
+
 
 /**
  * Displays the next question, increase the questionCount by 1 and if there are no more questions it will show your score.

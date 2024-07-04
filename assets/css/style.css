@@ -46,7 +46,8 @@ button:hover {
 }
 
 #start-btn,
-#restart {
+#restart,
+#exit-quiz {
     font-size: 1.33em;
     padding: 0.5em 1.8em;
     box-shadow: 0 20px 30px rgba(0,0,0,0.4);
@@ -55,7 +56,8 @@ button:hover {
 
 }
 
-#restart {
+#restart,
+#exit-quiz {
     margin-top: 0.9em;
 }
 
