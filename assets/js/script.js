@@ -11,12 +11,12 @@ const scoreContainer = document.getElementById("score-container");
 const muteButton = document.getElementById("mute-button");
 const correctSound = document.getElementById("correct-sound");
 const incorrectSound = document.getElementById("incorrect-sound");
-let questionCount;
+let questionIndex = 0;
 let scoreCount = 0;
-let count = 16;
+let timer = 16;
 let countdownInterval;
 let selectedQuestions = [];
-let soundEnabled = True;
+let soundEnabled = true;
 
 
 // 16 questions with answers and option array//
@@ -97,7 +97,7 @@ const quizArray = [
             "Pray with the Israelites",
             "Kill the people"
         ],
-        "correct": "Let my people go"
+        "correct": "Let his people go"
     },
     {
         "id": "7",
@@ -139,7 +139,7 @@ const quizArray = [
             "Washed their feet",
             "Gave them money",
             "Prayed for them",
-            "Gist with them"
+            "Talked with them"
         ],
         "correct": "Washed their feet"
     },
@@ -182,7 +182,7 @@ const quizArray = [
         "options": [
             "You shall not steal",
             "You shall not lie",
-            "Yous shall have no other gods before me",
+            "You shall have no other gods before me",
             "You shall not kill"
         ],
         "correct": "You shall have no other gods before me"
@@ -192,7 +192,7 @@ const quizArray = [
         "question": "What is the last book in the bible?",
         "options": [
             "Revelation",
-            "Act",
+            "Acts",
             "Malachi",
             "Matthew"
         ],
@@ -225,19 +225,18 @@ restart.addEventListener("click", function () {
  * Displays the next question, increase the questionCount by 1 and if there are no more questions it will show your score.
  */
 function displayNext() {
-    questionIndex += 1;
+    questionIndex ++;
 
-    if (questionIndex == selectedQuestions.length) {
+    if (questionIndex === selectedQuestions.length) {
         displayContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         userScore.innerHTML = "Your Score is " +
             scoreCount + " out of " + selectedQuestions.length;
     } else {
         numOfQue.innerHTML = questionIndex + 1 + " of " + selectedQuestions.length + " Question";
-
         displayQuestion(questionIndex);
-        count = 16;
-        clearInterval(countdown);
+        timer = 16;
+        clearInterval(countdownInterval);
         startTimer();
     }
 }
@@ -262,7 +261,6 @@ function startTimer() {
 
 function displayQuestion(index) {
     let quizCards = document.querySelectorAll(".container-mid");
-
     quizCards.forEach(function (card) {
         card.classList.add("hide");
     });
@@ -274,15 +272,11 @@ function displayQuestion(index) {
  * Creates the quiz with random questions selected from the questionsArray
  */
 function createQuiz() {
-    quizArray.sort(function () {
-        return Math.random() - 0.5;
-    });
+    quizArray.sort(() => Math.random() - 0.5);
     // Select 10 random questions from the pool of 16 questions //
-    selectedQuestions = quizArray.slice(0,10)
+    selectedQuestions = quizArray.slice(0, 10)
     for (let question of selectedQuestions) {
-        question.options.sort(function () {
-            return 0.5 - Math.random();
-        });
+        question.options.sort(() => 0.5 - Math.random());
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
 
@@ -310,19 +304,21 @@ function createQuiz() {
 /**
  * Checks the right answer and if correct add to scoreCount.
  */
-function checker(userOption) {
-    let userSolution = userOption.innerText;
-    let question = document.getElementsByClassName("container-mid")[questionCount];
+function checkAnswer(button, correctAnswer) {
+    let userAnswer = button.innerText;
+    let question = document.getElementsByClassName("container-mid")[questionIndex];
     let options = question.querySelectorAll(".option-div");
 
-    if (userSolution === quizArray[questionCount].correct) {
-        userOption.classList.add("correct");
+    if (userAnswer === correctAnswer) {
+        button.classList.add("correct");
         scoreCount++;
+        if (soundEnabled) correctSound.play();
     } else {
-        userOption.classList.add("incorrect");
+        button.classList.add("incorrect");
+        if(soundEnabled) incorrectSound.play();
 
         options.forEach(function (element) {
-            if (element.innerText === quizArray[questionCount].correct) {
+            if (element.innerText === correctAnswer) {
                 element.classList.add("correct");
             } else {
                 element.disabled = true; 
@@ -330,24 +326,25 @@ function checker(userOption) {
         });
     }
 
-    clearInterval(countdown);
+    clearInterval(countdownInterval);
     options.forEach(function (element) {
         element.disabled = true; 
     });
+    nextQuestionButton.disabled = false;
 }
 
 /**
  * Initial function to clear the quiz and start from zero.
  */
-function initial() {
+function initializeQuiz() {
     quizContainer.innerHTML = "";
-    questionCount = 0;
+    questionIndex = 0;
     scoreCount = 0;
-    count = 16;
-    clearInterval(countdown);
-    timerDisplay();
-    quizCreator();
-    quizDisplay(questionCount);
+    timer = 16;
+    clearInterval(countdownInterval);
+    startTimer();
+    createQuiz();
+    displayQuestion(questionIndex);
 }
 
 /**
@@ -357,6 +354,11 @@ startBtn.addEventListener("click", function () {
     startScrn.classList.add("hide");
     displayContainer.classList.remove("hide");
     initializeQuiz();
+});
+
+muteButton.addEventListener("click", function () {
+    soundEnabled = !soundEnabled;
+    muteButton.innerText = soundEnabled ? "Mute" : "Unmute";
 });
 
 /**
