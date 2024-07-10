@@ -215,7 +215,7 @@ const quizArray = [
 /**
  * Exit the game and go back to the start screen
  */
-function exitQuiz () {
+function exitQuiz() {
     clearInterval(countdownInterval);
     displayContainer.classList.add("hide");
     scoreContainer.classList.add("hide");
@@ -232,7 +232,6 @@ restart.addEventListener("click", function () {
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
-
 
 
 /**
@@ -268,7 +267,7 @@ function startTimer() {
         if (timer === 0) {
             clearInterval(countdownInterval);
             displayNext();
-        };
+        }
     }, 1000);
 }
 
@@ -294,7 +293,7 @@ function createQuiz() {
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
 
-        numOfQue.innerHTML = 1 + " of " + selectedQuestions.length + " Questions";
+        numOfQue.innerHTML = "1 of " + selectedQuestions.length + " Questions";
 
         let questionDIV = document.createElement("p");
         questionDIV.classList.add("question");
@@ -318,31 +317,23 @@ function createQuiz() {
 /**
  * Checks the right answer and if correct add to scoreCount.
  */
-function checkAnswer(button, correctAnswer) {
-    let userAnswer = button.innerText;
-    let question = document.getElementsByClassName("container-mid")[questionIndex];
-    let options = question.querySelectorAll(".option-div");
-
-    if (userAnswer === correctAnswer) {
-        button.classList.add("correct");
+function checkAnswer(userOption, correctAnswer) {
+    if (userOption.innerHTML === correctAnswer) {
+        userOption.classList.add("correct");
         scoreCount++;
         if (soundEnabled) correctSound.play();
     } else {
-        button.classList.add("incorrect");
-        if(soundEnabled) incorrectSound.play();
-
-        options.forEach(function (element) {
-            if (element.innerText === correctAnswer) {
-                element.classList.add("correct");
-            } else {
-                element.disabled = true; 
-            }
-        });
+        userOption.classList.add("incorrect");
+        if (soundEnabled) incorrectSound.play();
     }
 
     clearInterval(countdownInterval);
-    options.forEach(function (element) {
-        element.disabled = true; 
+    let options = userOption.parentElement.querySelectorAll(".option-div");
+    options.forEach(button => {
+        button.disabled = true;
+        if (button.innerHTML === correctAnswer) {
+            button.classList.add("correct");
+        }
     });
     nextQuestionButton.disabled = false;
 }
