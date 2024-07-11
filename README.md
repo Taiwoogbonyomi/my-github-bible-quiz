@@ -2,32 +2,35 @@
 
 Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bible. Answer a series of multiple-choice questions and see how well you score. The game includes sound effects for correct and incorrect answers, a timer for each question, and the ability to mute/unmute the sounds.
 
- ![Bible Quiz responsive design](assets/README%20Images/mockup%20images.png)
- [Back to top](<#table-of-contents>)
+ ![Bible Quiz responsive design](assets/README%20Images/mockup-images.png)
 
-#  Table of contents
+
+# Contents
 - [Demo](#demo)
 * [**User Experience UX**](<#user-experience-ux>)
     *  [User Stories](<#user-stories>)
-[**Features**](<#features>)
+* [**Features**](<#features>)
     * [Start Screen](<#start-screen>)
     * [Questions](<#questions>)
     * [Score](<#score>)
     * [Restart](<#restart>)
     * [Exit](<#exit>)
     * [**Future Features**](<#future-features>)
+* [**Wireframe**](#wireframe)
+    * [Smartphones](#wireframe)
+    * [Tablets](#wireframe)
+    * [Desktops](#wireframe)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
-    * [**Content**](<#content>)
-    * [**Media**](<#media>)
 *  [**Acknowledgements**](<#acknowledgements>)
 
 ## Demo
 
 Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bible-quiz/](#).
-[Back to top](<#table-of-contents>)
+
+[Back to top](<#contents>)
 
 # User Experience
 
@@ -43,7 +46,7 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 * As a user, I want to restart the quiz from the end screen so that I can try again and improve my score.
 * As a user, I want to exit the quiz and return to the start screen so that I can choose a different activity or restart the quiz later.
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ## Features
 
@@ -61,6 +64,8 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 
     <img src="assets/README Images/start-screen (2).png" alt="start screen with a background image and a start button">
 
+[Back to top](<#contents>)
+
 ### Questions
 
 - Select one of the four options presented for each question.
@@ -68,6 +73,8 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 - Use the "Next" button to proceed after answering each question.
 
     <img src="assets/README Images/questions-screen.png" alt="question screen containing the question, time and the next button">
+
+[Back to top](<#contents>)
 
 ### Score
 ### Restart
@@ -79,6 +86,7 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 
     <img src="assets/README Images/score-screen.png" alt="score, restart and exit button screen">
 
+[Back to top](<#contents>)
 
 ## Future Features
 
@@ -94,7 +102,24 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
     * Competitive Play: Allow multiple players to compete against each other in real-time.
     * Score Comparison: Compare scores at the end of each round.
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
+
+## Wireframe
+
+The wireframes for the bible quiz were produced in [Balsamiq](https://balsamiq.com). There are frames for a full width display on desktop, tablet and a smartphone device. 
+
+![Mobile wireframe image](assets/README%20Images/smartphone-wireframe.png)
+
+[Back to top](<#contents>) 
+
+![tablet wireframe image](assets/README%20Images/ipad-wireframe.png)
+
+[Back to top](<#contents>)
+
+![Desktop wireframe image](assets/README%20Images/desktop-wireframe.png)
+
+[Back to top](<#contents>)
+
 
 
 ## Installation
@@ -136,7 +161,7 @@ The procedure for deployment followed the "Creating your site" steps provided in
 The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ## Technologies Used
 ## Languages
@@ -150,15 +175,14 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 ## font
 - Google Fonts
-  - In this project the font _Roboto_ was choosen in [GoogleFonts](https://fonts.google.com/specimen/Roboto)
--The font used is Roboto and san-serif because they are designed to look good on multiple screen sizes.
+  - In this project the font _Roboto_ was choosen in [GoogleFonts](https://fonts.google.com/specimen/Roboto) because they are designed to look good on multiple screen sizes.
 
 ### Frameworks, Libraries & Programs Used
 - Git: Git was used to commit and push the codes to github for storage. 
 - [GitPod](https://gitpod.io/): Gitpod was used as the development environment for this project. In order to track development stage and version control, regular commits and pushes to GitHub has been made. The GitPod environment was created using a template provided by Code Institute.
 - [GitHub](https://github.com/): Github was used to deploy the site and store the codes. 
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ### Browser compatibility 
 The browsers below were used to test compatibility and there were no issues at all.
@@ -167,7 +191,7 @@ The browsers below were used to test compatibility and there were no issues at a
 - Microsoft Edge Versie 103.0.1264.44
 - Google Chrome Versie 103.0.5060.114
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ## Testing
 ## User Story Testing
@@ -181,7 +205,7 @@ The browsers below were used to test compatibility and there were no issues at a
 | The user should be able to exit the quiz.| When the quiz finishes, the user gets an exit button option if they wish to exit the game.|
 
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ## Manual code testing
 ### Responsiveness
@@ -210,25 +234,26 @@ No errors where found by the official JSHint validator
 3. LIGHTHOUSE
  <img src="assets/README Images/lighthouse.png" alt="Lighthouse result">
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
  ### Fixed bugs 
 - Options not working properly, fixed by changing the display in the option div from inline to block.
-- Score and restart screen not showing, fixed by changing their display function from none to block 
+- Questions lingering and not allowing the game to restart correctly, this was fixed in the JS function initialize quiz ensuring that all the variables resets when restarting game.
+- Score and restart screen not showing, fixed by changing their display function from none to block.
+- Next question button enabled before the user selects an answer enabling the user to skip a question, this was fixed in the javascript by disabling the next button initially and enabling it only after an answer is selected
 - DisplayNext function not properly working, Fixed by extrating the function from local scope to global scope.
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
 
 ### Credits
-### Images
 - All images were taken from: [Pngegg](https://www.pngegg.com/)
-
-### Codes 
-- The basic code used was obtained from a [youtube tutorial from Dear Programmer](https://www.youtube.com/watch?v=WiLTsxjCmWQ&ab_channel=DearProgrammer) with some alterations made .
+- Sounds used for the game were gotten from [upbeat](https://uppbeat.io/)
+- The [youtube tutorial from Dear Programmer](https://www.youtube.com/watch?v=WiLTsxjCmWQ&ab_channel=DearProgrammer) served as inspiration for this game.
 - I found lots of useful information and codes from the[w3schools](https://www.w3schools.com/) 
 - Various parts of the website were inspired by the love math walkthrough project from Code institute 
-
-### Others
 - [Mock-up generator](https://techsini.com/multi-mockup/) used to display the site on different screen sizes.
 
-[Back to top](<#table-of-contents>)
+[Back to top](<#contents>)
+
+## Acknowledgements
+I would like to thank my mentor Precious Ijege, the Slack community, and all at the Code Institute for their help and support.
