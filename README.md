@@ -2,7 +2,7 @@
 
 Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bible. Answer a series of multiple-choice questions and see how well you score. The game includes sound effects for correct and incorrect answers, a timer for each question, and the ability to mute/unmute the sounds.
 
- ![Bible Quiz responsive design](<img src="assets/README Images/mockup images.png" alt="Picture of the webpage across different devices">)
+ ![Bible Quiz responsive design]("assets/README Images/mockup images.png" alt="Picture of the webpage across different devices")
 
 #  Table of contents
 - [Demo](#demo)
@@ -26,7 +26,7 @@ Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bibl
 ## Demo
 
 Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bible-quiz/](#).
-
+[Back to top](<#table-of-contents>)
 
 # User Experience
 
@@ -135,6 +135,7 @@ The procedure for deployment followed the "Creating your site" steps provided in
 The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 
+[Back to top](<#table-of-contents>)
 
 ## Technologies Used
 ## Languages
@@ -156,13 +157,16 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 - [GitPod](https://gitpod.io/): Gitpod was used as the development environment for this project. In order to track development stage and version control, regular commits and pushes to GitHub has been made. The GitPod environment was created using a template provided by Code Institute.
 - [GitHub](https://github.com/): Github was used to deploy the site and store the codes. 
 
+[Back to top](<#table-of-contents>)
 
 ### Browser compatibility 
 The browsers below were used to test compatibility and there were no issues at all.
 
 - Mozilla Firefox versie 102.0
 - Microsoft Edge Versie 103.0.1264.44
--Google Chrome Versie 103.0.5060.114 
+- Google Chrome Versie 103.0.5060.114
+
+[Back to top](<#table-of-contents>)
 
 ## Testing
 ## User Story Testing
@@ -175,6 +179,8 @@ The browsers below were used to test compatibility and there were no issues at a
 | The user should be able to restart the quiz and try to improve.| When the quiz finishes, the user gets a clear Restart button if they wish to try again.|
 | The user should be able to exit the quiz.| When the quiz finishes, the user gets an exit button option if they wish to exit the game.|
 
+
+[Back to top](<#table-of-contents>)
 
 ## Manual code testing
 ### Responsiveness
@@ -203,11 +209,14 @@ No errors where found by the official JSHint validator
 3. LIGHTHOUSE
  <img src="assets/README Images/lighthouse.png" alt="Lighthouse result">
 
+[Back to top](<#table-of-contents>)
+
  ### Fixed bugs 
 - Options not working properly, fixed by changing the display in the option div from inline to block.
 - Score and restart screen not showing, fixed by changing their display function from none to block 
 - DisplayNext function not properly working, Fixed by extrating the function from local scope to global scope.
 
+[Back to top](<#table-of-contents>)
 
 ### Credits
 ### Images
@@ -220,3 +229,5 @@ No errors where found by the official JSHint validator
 
 ### Others
 - [Mock-up generator](https://techsini.com/multi-mockup/) used to display the site on different screen sizes.
+
+[Back to top](<#table-of-contents>)
