@@ -171,9 +171,9 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 - CSS
   - Styling and layout.
 - JS
-  - Javascript code quiz functionality, including question navigation, timing, and score calculation..
+  - Javascript code quiz functionality, including question navigation, timing, sound, and score calculation..
 
-## font
+## Font
 - Google Fonts
   - In this project the font _Roboto_ was choosen in [GoogleFonts](https://fonts.google.com/specimen/Roboto) because they are designed to look good on multiple screen sizes.
 
@@ -195,7 +195,7 @@ The browsers below were used to test compatibility and there were no issues at a
 
 ## Testing
 ## User Story Testing
-|Goal| execution|
+|Goal| Execution|
 |--------------------------------------------------------------------------------------|-------------------------------------------------------|
 | The main goal is to let the user test their bible story knowledge.| The Quiz lets them test their knowledge and restart if they want to try and improve.|
 | The user should have good insight in the content when viewing the startpage.| The backgroundimage gives the user a clear sight of what the quiz will be about|
@@ -212,7 +212,7 @@ The browsers below were used to test compatibility and there were no issues at a
 - The website is designed to be used on different screen sizes. 
 - The responsiveness of the website was first tested by chrome developer tools. 
 - Different breakpoints where used to view the website. 
-- Next to this the website was viewed on different devices: laptop, tablet and smartphones.
+- Next to this, the website was viewed on different devices: laptop, tablet and smartphones.
 
 ## Validator testing
 1. HTML
@@ -227,7 +227,7 @@ No errors where found by the official Jigsaw validator
 <img src="assets/README Images/W3c css-validator.png" alt="picture of Jigsaw validator result" >
 
 3. JSHint 
-No errors where found by the official JSHint validator
+No errors were found by the official JSHint validator
 
 <img src="assets/README Images/JShint.png" alt="picture of Jigsaw validator results">
 

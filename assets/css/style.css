@@ -69,8 +69,7 @@ button:hover {
 
 
 #restart,
-#exit-quiz,
-.score-container button {
+#exit-quiz {
     font-size: 1.33em;
     padding: 0.5em 1.8em;
     box-shadow: 0 20px 30px rgba(0,0,0,0.4);
