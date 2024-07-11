@@ -20,6 +20,7 @@ let selectedQuestions = [];
 let soundEnabled = true;
 
 
+
 // 16 questions with answers and option array//
 const quizArray = [
     {

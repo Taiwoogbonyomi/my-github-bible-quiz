@@ -23,12 +23,12 @@
         <div class="header">
             <div class="num-of-que">
                 <span class="number-of-question">
-                    1 of 16 questions
+                    1 of 10 questions
                 </span>
             </div>
 
             <div class="timer-div">
-                <img id="stop-time" src="assets/images/stop-time.png" alt="image of a stop watch" style="height: 30px; width: 30px;">
+                <img id="stop-time" src="assets/images/stop-time.png" alt="stopwatch" style="height: 30px; width: 30px;">
                 <span class="time-left">15s</span>
         
             </div>
@@ -66,10 +66,10 @@
                 <p class="question">
                     "How many days did it rain when Noah was in the ark?"
                 </p>
-                <button class="option-div" onclick="checker(this)">32</button>
-                <button class="option-div incorrect" onclick="checker(this)">30</button>
-                <button class="option-div correct" onclick="checker(this)">40</button>
-                <button class="option-div" onclick="checker(this)">10</button>
+                <button class="option-div" onclick="checker(this)">32 days</button>
+                <button class="option-div incorrect" onclick="checker(this)">30 days</button>
+                <button class="option-div correct" onclick="checker(this)">40 days</button>
+                <button class="option-div" onclick="checker(this)">10 days</button>
             </div>
             <div class="container-mid hide">
                 <p class="question">
@@ -157,7 +157,7 @@
                     "What day of the week did Jesus rise back to life?"
                 </p>
                 <button class="option-div" onclick="checker(this)">Monday</button>
-                <button class="option-div correct" onclick="checker(this)">Sunday </button>
+                <button class="option-div correct" onclick="checker(this)">Sunday</button>
                 <button class="option-div" onclick="checker(this)">Wednesday</button>
                 <button class="option-div incorrect" onclick="checker(this)">Thursday</button>
             </div>
@@ -193,7 +193,7 @@
         <button id="mute-button">Mute</button>
     </div>
     <div class="score-container hide" id="score-container">
-        <div id="user-score">Your Score is 0 out of 16</div>
+        <div id="user-score">Your Score is 0 out of 10</div>
         <button id="restart">Restart Quiz</button>
         <button id="exit-quiz">Exit Quiz</button>
         
@@ -202,13 +202,6 @@
     
     <audio id="correct-sound" src="assets/sound/correct.mp3"></audio>
     <audio id="incorrect-sound" src="assets/sound/incorrect.mp3"></audio>
-    
-
-
-
-
-
-
     <script src="assets/js/script.js"></script>
 </body>
 </html>
