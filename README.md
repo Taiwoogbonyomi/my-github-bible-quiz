@@ -2,7 +2,7 @@
 
 Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bible. Answer a series of multiple-choice questions and see how well you score. The game includes sound effects for correct and incorrect answers, a timer for each question, and the ability to mute/unmute the sounds.
 
- ![Bible Quiz responsive design]<img src="assets/README Images/mockup images.png" alt="Picture of the webpage across different devices">
+ ![Bible Quiz responsive design](<img src="assets/README Images/mockup images.png" alt="Picture of the webpage across different devices">)
 
 #  Table of contents
 - [Demo](#demo)
@@ -22,12 +22,6 @@ Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bibl
     * [**Content**](<#content>)
     * [**Media**](<#media>)
 *  [**Acknowledgements**](<#acknowledgements>)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
-- [Credits](#credits)
 
 ## Demo
 
@@ -62,15 +56,15 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 
 ### Start Screen
 
-    - Click the "Start" button on the welcome screen.
+- Click the "Start" button on the welcome screen.
 
     <img src="assets/README Images/start-screen (2).png" alt="start screen with a background image and a start button">
 
 ### Questions
 
-    - Select one of the four options presented for each question.
-    - Each question must be answered within 15 seconds.
-    - Use the "Next" button to proceed after answering each question.
+- Select one of the four options presented for each question.
+- Each question must be answered within 15 seconds.
+- Use the "Next" button to proceed after answering each question.
 
     <img src="assets/README Images/questions-screen.png" alt="question screen containing the question, time and the next button">
 
@@ -78,9 +72,9 @@ Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bi
 ### Restart
 ### Exit 
 
-    - After the last question, your total score will be displayed.
-    - Click the "Restart" button to play again.
-    - Click the "Exit" button to return to the start screen.
+- After the last question, your total score will be displayed.
+- Click the "Restart" button to play again.
+- Click the "Exit" button to return to the start screen.
 
     <img src="assets/README Images/score-screen.png" alt="score, restart and exit button screen">
 
@@ -179,13 +173,15 @@ The browsers below were used to test compatibility and there were no issues at a
 | The user should have an easy accesible button to start the quiz.| The start button is clear and easily visible.|
 | The user should receive direct feedback on whether the answer is correct or not.| A clear orange and green color is used for the user to easily see which option was correct.|
 | The user should be able to restart the quiz and try to improve.| When the quiz finishes, the user gets a clear Restart button if they wish to try again.|
+| The user should be able to exit the quiz.| When the quiz finishes, the user gets an exit button option if they wish to exit the game.|
 
-## manual code testing
-### responsiveness
-The website is designed to be used on different screen sizes. 
-The responsiveness of the website was first tested by chrome developer tools. 
-Different breakpoints where used to view the website. 
-Next to this the website was viewed on different devices: laptop, tablet and smartphones.
+
+## Manual code testing
+### Responsiveness
+- The website is designed to be used on different screen sizes. 
+- The responsiveness of the website was first tested by chrome developer tools. 
+- Different breakpoints where used to view the website. 
+- Next to this the website was viewed on different devices: laptop, tablet and smartphones.
 
 ## Validator testing
 1. HTML
