@@ -2,7 +2,8 @@
 
 Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bible. Answer a series of multiple-choice questions and see how well you score. The game includes sound effects for correct and incorrect answers, a timer for each question, and the ability to mute/unmute the sounds.
 
- ![Bible Quiz responsive design]("assets/README Images/mockup images.png" alt="Picture of the webpage across different devices")
+ ![Bible Quiz responsive design](assets/README%20Images/mockup%20images.png)
+ [Back to top](<#table-of-contents>)
 
 #  Table of contents
 - [Demo](#demo)
