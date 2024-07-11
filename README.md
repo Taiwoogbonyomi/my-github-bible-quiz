@@ -1,12 +1,27 @@
 # 📖 Bible Quiz
 
-Welcome to the Bible Quiz! This web-based quiz application is designed to test and enhance your knowledge of the Bible. Answer multiple choice questions under a time limit and see how well you score!
+Bible Quiz ia a fun and interactive quiz game to test your knowledge of the Bible. Answer a series of multiple-choice questions and see how well you score. The game includes sound effects for correct and incorrect answers, a timer for each question, and the ability to mute/unmute the sounds.
 
-  <img src="assets/README Images/mockup images.png" alt="Picture of the webpage across different devices">
+ ![Bible Quiz responsive design]<img src="assets/README Images/mockup images.png" alt="Picture of the webpage across different devices">
 
-##  Table of content
+#  Table of contents
 - [Demo](#demo)
-- [Features](#features)
+* [**User Experience UX**](<#user-experience-ux>)
+    *  [User Stories](<#user-stories>)
+[**Features**](<#features>)
+    * [Start Screen](<#start-screen>)
+    * [Questions](<#questions>)
+    * [Score](<#score>)
+    * [Restart](<#restart>)
+    * [Exit](<#exit>)
+    * [**Future Features**](<#future-features>)
+* [**Technologies Used**](<#technologies-used>)
+* [**Testing**](<#testing>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+    * [**Content**](<#content>)
+    * [**Media**](<#media>)
+*  [**Acknowledgements**](<#acknowledgements>)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Testing](#testing)
@@ -18,13 +33,73 @@ Welcome to the Bible Quiz! This web-based quiz application is designed to test a
 
 Check out a live demo of the Bible Quiz [https://taiwoogbonyomi.github.io/PP2_bible-quiz/](#).
 
+
+# User Experience
+
+## User Stories
+
+* As a user, I want clear instructions on how to play the Bible Quiz so that I understand the rules before starting the game.
+* As a user, I want to answer a series of randomized questions from the Bible so that each quiz feels different.
+* As a user, I want to select an answer from multiple options so that I can participate in the quiz and test my knowledge.
+* As a user, I want to see whether my selected answer is correct or incorrect immediately after I answer so that I can learn from my mistakes and know my score as I progress.
+* As a user, I want to mute or unmute the sound effects so that I can control the audio based on my environment.
+* As a user, I want to see a countdown timer for each question so that I know how much time I have left to answer.
+* As a user, I want to see my score at the end of the quiz so that I can know how well I performed.
+* As a user, I want to restart the quiz from the end screen so that I can try again and improve my score.
+* As a user, I want to exit the quiz and return to the start screen so that I can choose a different activity or restart the quiz later.
+
+[Back to top](<#table-of-contents>)
+
 ## Features
 
-- 16 thoughtfully curated Bible-related questions.
-- Multiple choice answers with real-time feedback.
-- Countdown timer for each question.
-- Display of final score with an option to restart the quiz.
-- Responsive design for all devices.
+- **Multiple-choice Questions**: 10 random questions selected from a pool of 16.
+- **Timer**: 15 seconds to answer each question.
+- **Sound Effects**: Audio feedback for correct and incorrect answers.
+- **Mute/Unmute Button**: Control the sound effects.
+- **Score Display**: View your score at the end of the quiz.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+
+### Start Screen
+
+    - Click the "Start" button on the welcome screen.
+
+    <img src="assets/README Images/start-screen (2).png" alt="start screen with a background image and a start button">
+
+### Questions
+
+    - Select one of the four options presented for each question.
+    - Each question must be answered within 15 seconds.
+    - Use the "Next" button to proceed after answering each question.
+
+    <img src="assets/README Images/questions-screen.png" alt="question screen containing the question, time and the next button">
+
+### Score
+### Restart
+### Exit 
+
+    - After the last question, your total score will be displayed.
+    - Click the "Restart" button to play again.
+    - Click the "Exit" button to return to the start screen.
+
+    <img src="assets/README Images/score-screen.png" alt="score, restart and exit button screen">
+
+
+## Future Features
+
+* Add Difficult levels
+    * Easy, Medium, Hard: This would allow users to select a difficulty level, which will determine the complexity of the questions.
+* Expand Questions Pool
+    * Add more questions to increase the variety and challenge of the quiz.
+    * Organize questions into categories (e.g., Old Testament, New Testament, Prophets, Miracles)
+* Lifelines
+    * Hints: Provide hints for difficult questions.
+    * 50/50: Remove two incorrect answers, leaving one correct and one incorrect option.
+* Multiplayer Mode
+    * Competitive Play: Allow multiple players to compete against each other in real-time.
+    * Score Comparison: Compare scores at the end of each round.
+
+[Back to top](<#table-of-contents>)
 
 
 ## Installation
@@ -67,40 +142,19 @@ The link can be found here: https://taiwoogbonyomi.github.io/PP2_bible-quiz/
 
 
 
-## Usage
-
-1. **Start the Quiz:**
-
-    - Click the "Start" button on the welcome screen.
-
-    <img src="assets/README Images/start-screen.png" alt="start screen with a background image and a start button">
-
-2. **Answer Questions:**
-
-    - Select one of the four options presented for each question.
-    - Each question must be answered within 15 seconds.
-    - Use the "Next" button to proceed after answering each question.
-
-    <img src="assets/README Images/question-screen.png" alt="question screen containing the question, time and the next button">
-
-3. **View Your Score:**
-4. **Restart the Quiz:**
-
-    - After the last question, your total score will be displayed.
-    - Click the "Restart" button to play again.
-
-    <img src="assets/README Images/score and restart-screen.png" alt="Score and restart button screen">
-
-
 ## Technologies Used
 ## Languages
 
-- **HTML**: For structuring the web page.
-- **CSS**: For styling and layout.
-- **JavaScript**: For quiz functionality, including question navigation, timing, and score calculation.
+- HTML
+  - Page markup and structuring of the web page.
+- CSS
+  - Styling and layout.
+- JS
+  - Javascript code quiz functionality, including question navigation, timing, and score calculation..
 
 ## font
-
+- Google Fonts
+  - In this project the font _Roboto_ was choosen in [GoogleFonts](https://fonts.google.com/specimen/Roboto)
 -The font used is Roboto and san-serif because they are designed to look good on multiple screen sizes.
 
 ### Frameworks, Libraries & Programs Used
